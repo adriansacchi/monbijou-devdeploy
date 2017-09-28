@@ -1,0 +1,27 @@
+{
+  "type": "component",
+  "name": "BijColumnHeaderComponent",
+  "selector": "bij-column-header",
+  "description": [
+    "Provides a visual representation for a <a href='#/api/bij-title-cell.directive'><code>BijTitleCellDirective</code></a>, which allows the user to sort and filter column values.",
+    "<h2>Example usage:</h2>",
+    "<div class='code-snippet'><xmp class='code'>",
+    "<bij-header>\n",
+    "  <bij-title-cell>\n",
+    "    <ng-template><bij-column-header>firstname</bij-column-header></ng-template>\n",
+    "  </bij-title-cell>\n",
+    "  <bij-title-cell>\n",
+    "    <ng-template [filter]=\"false\"><bij-column-header>lastname</bij-column-header></ng-template>\n",
+    "  </bij-title-cell>\n",
+    "</bij-header>",
+    "</xmp></div>"
+  ],
+  "links": [
+    { "label": "BijTitleCellDirective", "url": "/api/bij-title-cell.directive" }
+  ],
+  "input": [
+    { "name": "filter", "description": "Enable or disable filtering" },
+    { "name": "sort", "description": "Enable or disable sorting" }
+  ],
+  "output": []
+}

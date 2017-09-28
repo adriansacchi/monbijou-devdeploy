@@ -1,0 +1,7 @@
+{
+  "type": "type",
+  "name": "ThData",
+  "links": [
+    { "label": "BijThDirective", "url": "/api/bij-th.directive"}
+  ]
+}

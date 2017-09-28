@@ -1,0 +1,29 @@
+{
+  "type": "directive",
+  "name": "BijCellDirective",
+  "selector": "bij-cell",
+  "description": [
+    "Represents a table cell and is similar to the HTML <code class='html-tag'>td</code> element.",
+    "<p>",
+    "Provide a visual cell representation in the form of a child component wrapped within a <code class='html-tag'>ng-template</code>.",
+    "<p>",
+    "This modelling directive will not be projected into the DOM, so do not style this element, nor install any event listeners.",
+    "<h2>Example usage:</h2>",
+    "<div class='code-snippet'><xmp class='code'>",
+    "<bij-row *ngFor=\"let person of persons\">\n",
+    "  <bij-cell>\n",
+    "    <ng-template><b>{{person.firstname}}</b></ng-template>\n",
+    "  </bij-cell>\n",
+    "  <bij-cell>\n",
+    "    <ng-template>{{person.lastname}}</ng-template>\n",
+    "  </bij-cell>\n",
+    "</bij-row>",
+    "</xmp></div>"
+  ],
+  "links": [
+    { "label": "BijRowDirective", "url": "/api/bij-row.directive"},
+    { "label": "TemplateRef", "url": "https://angular.io/api/core/TemplateRef", "external": true }
+  ],
+  "input": [],
+  "output": []
+}

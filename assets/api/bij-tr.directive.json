@@ -1,0 +1,17 @@
+{
+  "type": "directive",
+  "name": "BijTrDirective",
+  "selector": "tr[bijTr]",
+  "description": [
+    "Directive to be applied on HTML <code class='html-tag'>tr</code> elements of <a href='#/api/bij-table.component'><code>BijTableComponent</code></a>.",
+    "<p>",
+    "This directive must be given an instance of <a href='#/api/tr-data'><code>TrData</code></a> as its input value."
+  ],
+  "links": [
+    { "label": "BijTableComponent", "url": "/api/bij-table.component"},
+    { "label": "BijRowDirective", "url": "/api/bij-row.directive"},
+    { "label": "TrData", "url": "/api/tr-data"}
+  ],
+  "input": [],
+  "output": []
+}

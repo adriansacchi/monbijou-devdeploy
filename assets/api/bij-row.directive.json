@@ -1,0 +1,84 @@
+{
+  "type": "directive",
+  "name": "BijRowDirective",
+  "selector": "bij-row",
+  "description": [
+    "Represents a table row and is similar to the HTML <code class='html-tag'>tr</code> element.",
+    "<p>",
+    "The row can be bound to the domain object, which represents the row, via <code class='ng-directive'>element</code> input property.<br>",
+    "This allows to implement custom filtering and sorting based on the domain object properties.",
+    "<p>",
+    "This modelling directive will not be projected into the DOM, so do not style this element, nor install any event listeners.<br>",
+    "Instead, provide your custom template for HTML <code class='html-tag'>tr</code> tag via <code class='ng-directive'>trTemplateRef</code> input property.",
+    "<h2>Example usage:</h2>",
+    "<div class='code-snippet'><xmp class='code'>",
+    "<bij-row *ngFor=\"let person of persons\" [element]=\"person\">\n",
+    "  <bij-cell>\n",
+    "    <ng-template>{{person.firstname}}</ng-template>\n",
+    "  </bij-cell>\n",
+    "  <bij-cell>\n",
+    "    <ng-template>{{person.lastname}}</ng-template>\n",
+    "  </bij-cell>\n",
+    "</bij-row>",
+    "</xmp></div>"
+  ],
+  "links": [
+    { "label": "BijTableComponent", "url": "/api/bij-table.component"},
+    { "label": "BijRowDirective", "url": "/api/bij-row.directive"}
+  ],
+  "input": [
+    {
+      "name": "element",
+      "description": [
+        "Specifies the domain object which is represented by this row.",
+        "<p>",
+        "This allows to select a row by its domain object, or to scroll a row into the viewport by its domain object.",
+        "<p>",
+        "Further, when associating a domain object with the row, this allows to compute the row identity by specifying a <a href='https://angular.io/api/core/TrackByFunction' target='_blank'><code>TrackByFunction</code></a>, ",
+        "or to apply custom filtering by specifying a <a href='#/api/filter-fn'><code>FilterFn</code></a>, or to implement custom sorting by specifying a <a href='#/api/compare-fn'><code>CompareFn</code></a>.",
+        "<p>",
+        "See <a href='#/api/bij-table.component'><code>BijTableComponent</code></a> to provide a <a href='https://angular.io/api/core/TrackByFunction' target='_blank'><code>TrackByFunction</code></a>, or <a href='#/api/bij-title-cell.directive'><code>BijTitleCellDirective</code></a> to provide a <a href='#/api/filter-fn'><code>FilterFn</code></a> or <a href='#/api/compare-fn'><code>CompareFn</code></a>."
+      ],
+      "links": [
+        { "label": "BijTableComponent", "url": "/api/bij-table.component" },
+        { "label": "TrackByFunction", "url": "https://angular.io/api/core/TrackByFunction", "external": true },
+        { "label": "FilterFn", "url": "/api/filter-fn" },
+        { "label": "CompareFn", "url": "/api/compare-fn" }
+      ]
+    },
+    {
+      "name": "trTemplateRef",
+      "description": [
+        "Specifies an optional <a href='https://angular.io/api/core/TemplateRef' target='_blank'><code>TemplateRef</code></a> which is rendered as this row's HTML <code class='html-tag'>tr</code> tag.",
+        "<p>",
+        "A custom template allows to decorate the <code class='html-tag'>tr</code> element, like to set CSS classes, or to install event listeners.",
+        "<p>",
+        "The template must fulfill the following requirements:",
+        "<ul>",
+        "  <li>provide an empty <code class='html-tag'>ng-template</code> as its DOM child, which acts as the anchor where its <code class='html-tag'>td</code> children are inserted</li>",
+        "  <li>apply <a href='#/api/bij-tr.directive'><code class='ng-directive'>bijTr</code></a> directive to the <code class='html-tag'>tr</code> element, with the implicit template variable as its value</li>",
+        "  <li>declare the template within the corresponding <code class='html-tag'>bij-table</code> tag</li>",
+        "</ul>",
+        "<p>",
+        "The template is given the implicit template variable <a href='#/api/tr-data'><code>TrData</code></a> to access the associated <code>row</code> and <code>rowIndex</code>.",
+        "<h2>Example usage:</h2>",
+        "<div class='code-snippet'><xmp class='code'>",
+        "<bij-row [trTemplateRef]=\"tr_template\">\n",
+        "  <bij-cell>...</bij-cell>\n",
+        "  <bij-cell>...</bij-cell>\n",
+        "</bij-row>\n",
+        "\n",
+        "<ng-template #tr_template let-trData>\n",
+        "  <tr [bijTr]=\"trData\"><ng-template></ng-template></tr>\n",
+        "</ng-template>",
+        "</xmp></div>"
+      ],
+      "links": [
+        { "label": "TemplateRef", "url": "https://angular.io/api/core/TemplateRef", "external": true },
+        { "label": "BijTrDirective", "url": "/api/bij-tr.directive" },
+        { "label": "TrData", "url": "/api/tr-data" }
+      ]
+    }
+  ],
+  "output": []
+}

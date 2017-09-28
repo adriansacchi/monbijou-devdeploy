@@ -1,0 +1,7 @@
+{
+  "type": "function",
+  "name": "CompareFn",
+  "description": [
+    "Function to compare the sort order of two cells of this column."
+  ]
+}

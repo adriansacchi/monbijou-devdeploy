@@ -1,0 +1,5 @@
+{
+  "type": "type",
+  "name": "ViewportChangeEvent",
+  "description": "Event which is fired upon a change of the visible client area in the viewport."
+}

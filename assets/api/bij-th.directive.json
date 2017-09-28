@@ -1,0 +1,17 @@
+{
+  "type": "directive",
+  "name": "BijThDirective",
+  "selector": "th[bijTh]",
+  "description": [
+    "Directive to be applied on HTML <code class='html-tag'>th</code> elements of <a href='#/api/bij-table.component'><code>BijTableComponent</code></a>.",
+    "<p>",
+    "This directive must be given an instance of <a href='#/api/th-data'><code>ThData</code></a> as its input value."
+  ],
+  "links": [
+    { "label": "BijTableComponent", "url": "/api/bij-table.component"},
+    { "label": "BijHeaderDirective", "url": "/api/bij-header.directive"},
+    { "label": "ThData", "url": "/api/th-data"}
+  ],
+  "input": [],
+  "output": []
+}
