@@ -1,7 +1,0 @@
-{
-  "type": "type",
-  "name": "TrData",
-  "links": [
-    { "label": "BijTrDirective", "url": "/api/bij-tr.directive"}
-  ]
-}

@@ -1,5 +1,0 @@
-{
-  "type": "function",
-  "name": "FilterFn",
-  "description": "Function to determine if a cell of this column matches a filter term."
-}
